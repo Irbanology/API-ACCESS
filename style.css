@@ -1,3 +1,33 @@
+body {
+    position: absolute;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+
+.parent {
+    margin: auto;
+}
+
 .widi {
     width: 18rem;
+    /* border: 5px solid darkcyan; */
+}
+
+.cardItem {
+    /* height: 149px; */
+    /* width: 141px; */
+    /* margin-top: 10px; */
+    /* margin-right: 20px; */
+    margin: 20px;
+
+    /* padding: 5px; */
+    /* text-align: center; */
+    transition: all 500ms ease-in-out;
+    /* background-color: #eee; */
+}
+
+.cardItem:hover {
+    margin-top: 50px;
+    cursor: pointer;
+    box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.2);
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
 }

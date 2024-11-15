@@ -1,23 +1,35 @@
 console.log("con");
 
+var lengt = 10
+var skip = 0
+async function load() {
+    lengt += 10
+    console.log("Dabgya");
+    if (lengt > 30) {
+        lengt = 30
+    }
+    await apiii()
+}
 async function apiii() {
-    var apiFetch = await fetch('https://dummyjson.com/products')
+    var apiFetch = await fetch(`https://dummyjson.com/products?limit=${lengt}&skip=${skip}`)
 
     var data = await apiFetch.json()
 
     var dummy = data.products
-    console.log(dummy);
-
+    console.log(dummy.length);
+    skip += lengt
     var main = document.getElementById('parent')
     console.log(main);
 
+    // for(var i=0; i<dummy.lenght)
 
     dummy.forEach(product => {
         console.log(product.title);
         console.log(product.price);
         console.log(product.images);
+
         var card = document.createElement('div')
-        card.classList.add('card', 'widi')
+        card.classList.add('card', 'widi', 'cardItem')
         main.appendChild(card)
 
         var img = document.createElement('img')
@@ -46,6 +58,8 @@ async function apiii() {
         diiiv.appendChild(price)
 
     });
+    console.log(dummy.length);
+
 }
 
 apiii()
