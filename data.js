@@ -1,5 +1,22 @@
 console.log("con");
 
+
+window.onload = function () {
+    var storedName = sessionStorage.getItem("username");
+    console.log(storedName);
+    var namee = document.getElementById("name");
+    console.log(namee.children[0]);
+    console.log(namee.children[1]);
+
+    if (storedName) {
+        namee.children[0].innerHTML = `Hi! ${storedName} 👋 `
+        namee.children[1].innerHTML = `Welcome to the SMIT student portal. You can find all your courses listed below`
+
+    } else {
+        namee.innerText = "Welcome, Guest!";
+    }
+};
+
 var lengt = 10
 var skip = 0
 async function load() {
@@ -54,7 +71,7 @@ async function apiii() {
         var price = document.createElement('a')
         price.setAttribute('href', '#')
         price.innerHTML = ` $ ${product.price}`
-        price.classList.add('btn', 'btn-primary')
+        price.classList.add('btn', 'btn-outline-dark')
         diiiv.appendChild(price)
 
     });
@@ -63,3 +80,4 @@ async function apiii() {
 }
 
 apiii()
+
