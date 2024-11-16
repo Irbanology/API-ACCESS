@@ -13,7 +13,8 @@ window.onload = function () {
         namee.children[1].innerHTML = `Welcome to the SMIT student portal. You can find all your courses listed below`
 
     } else {
-        namee.innerText = "Welcome, Guest!";
+    window.location.href = "./SIGN-UP/Register.html";
+    // namee.innerText = "Welcome, Guest!";
     }
 };
 
