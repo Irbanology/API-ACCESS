@@ -1,5 +1,8 @@
 console.log("con");
 
+var lBtn = document.getElementById('butt')
+
+var low = document.getElementById('lower')
 
 window.onload = function () {
     var storedName = sessionStorage.getItem("username");
@@ -13,18 +16,23 @@ window.onload = function () {
         namee.children[1].innerHTML = `Welcome to the SMIT student portal. You can find all your courses listed below`
 
     } else {
-    window.location.href = "./SIGN-UP/Register.html";
-    // namee.innerText = "Welcome, Guest!";
+        window.location.href = "./SIGN-UP/Register.html";
+        // namee.innerText = "Welcome, Guest!";
     }
 };
 
 var lengt = 10
 var skip = 0
+
 async function load() {
     lengt += 10
     console.log("Dabgya");
     if (lengt > 30) {
         lengt = 30
+        lBtn.disabled = true;
+        low.children[1].innerHTML = 'All Products Loaded.'
+        low.children[1].style.color = 'red'
+         
     }
     await apiii()
 }

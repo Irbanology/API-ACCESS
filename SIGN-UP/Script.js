@@ -13,7 +13,7 @@ function onSubmit(e) {
         email.style.border = "2px solid red";
         return;
     }
-    // var pp = password.value.length;
+    // var pp = password.value.length;  
     console.log(password.value.length);
     if (password.value.length <= 8) {
         password.style.border = "2px solid red";
@@ -37,9 +37,6 @@ function onSubmit(e) {
         alert("Please fill in all required fields.");
         return;
     }
-
-
-
 
     sessionStorage.setItem("username", cut);
 
